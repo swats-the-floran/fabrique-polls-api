@@ -8,6 +8,7 @@ $ python -m venv venv\
 $ source venv/bin/activate\
 (venv)$ export SECRET_KEY=some_key_you_generated\
 (venv)$ pip install -r requirements.txt
+(venv)$ python manage.py migrate
 
 launch:\
 (venv)$ python manage.py runserver
