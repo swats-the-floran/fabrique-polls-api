@@ -3,7 +3,7 @@ admin_password: admin
 
 installation:\
 $ git clone https://github.com/swats-the-floran/fabrique-polls-api \
-$ cd fabrique/\
+$ cd fabrique-polls-api/\
 $ python -m venv venv\
 $ source venv/bin/activate\
 (venv)$ export SECRET_KEY=some_key_you_generated\
