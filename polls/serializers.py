@@ -1,4 +1,5 @@
 from datetime import datetime
+from pytz import utc
 
 from rest_framework.serializers import (
     ModelSerializer,
@@ -66,7 +67,7 @@ class QuestionAnswerSerializer(ModelSerializer):
 
     def validate(self, value):
         poll = get_poll(value)
-        if poll.finish_date < datetime.now():
+        if poll.finish_date < utc.localize(datetime.now()):
             raise ValidationError("this poll is finished. you can't add your answer.")
     
         question = get_question(value)
